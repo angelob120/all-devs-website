@@ -32,15 +32,15 @@
         <!-- Main Content -->
         <div class="max-w-6xl mx-auto px-4 py-12 flex flex-wrap items-center">
             <div class="w-full sm:w-1/2 text-white">
-              <h1 class="text-5xl font-bold">Lorem ipsum, ipsum</h1>
-              <p class="my-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
-              <button class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded">Get in Touch</button>
+              <h1 class="text-6xl font-bold mb-6">Lorem ipsum, ipsum</h1>
+              <p class="my-6 text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+              <button class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded">Get in Touch</button>
             </div>
           
             <!-- Image - This will be your graphic image as a background or img tag -->
             <div class="w-full sm:w-1/2 mt-8">
               <!-- Replace with your actual image path -->
-              <img src="Group 130.png" alt="Graphic" class="max-w-xs mx-auto" />
+              <img src="Group 130.png" alt="Graphic" class="max-w-full mx-auto" style="height: auto; max-height: 400px;" />
             </div>
         </div>
     </div>
@@ -96,7 +96,7 @@
               <img src="Untitled (3) 1.png" alt="Code Icon" class="mr-2 h-20 w-26" /> <!-- Update with the path to your icon -->
               <h2 class="text-4xl font-bold">Web Development</h2>
             </div>
-            <p class="text-blue-800 mb-8">Lorem ipsum dolor sit amet consectetur adipiscing elit. Nisi, impedit rem, doloremque autem quibusdam blanditiis harum animi hic accusantium maxime atque ratione magni repellat? Duis aute irure te.</p>
+            <p class="mb-8">Lorem ipsum dolor sit amet consectetur adipiscing elit. Nisi, impedit rem, doloremque autem quibusdam blanditiis harum animi hic accusantium maxime atque ratione magni repellat? Duis aute irure te.</p>
             <a href="#" class="inline-block bg-blue-600 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">Learn More</a>
           </div>
         </div>
@@ -111,7 +111,7 @@
               <img src="Page 6.png" alt="Code Icon" class="mr-2 h-20 w-26" /> <!-- Update with the path to your icon -->
               <h2 class="text-4xl font-bold">App Development</h2>
             </div>
-            <p class="text-blue-800 mb-8">Lorem ipsum dolor sit amet consectetur adipiscing elit. Nisi, impedit rem, doloremque autem quibusdam blanditiis harum animi hic accusantium maxime atque ratione magni repellat? Duis aute irure te.</p>
+            <p class=" mb-8">Lorem ipsum dolor sit amet consectetur adipiscing elit. Nisi, impedit rem, doloremque autem quibusdam blanditiis harum animi hic accusantium maxime atque ratione magni repellat? Duis aute irure te.</p>
             <a href="#" class="inline-block bg-blue-600 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">Learn More</a>
           </div>
           <div class="flex-1 mb-8 md:mb-0">
@@ -131,7 +131,7 @@
               <img src="Group 23.png" alt="Code Icon" class="mr-2 h-20 w-26" /> <!-- Update with the path to your icon -->
               <h2 class="text-4xl font-bold">SEO & Maintenance </h2>
             </div>
-            <p class="text-blue-800 mb-8">Lorem ipsum dolor sit amet consectetur adipiscing elit. Nisi, impedit rem, doloremque autem quibusdam blanditiis harum animi hic accusantium maxime atque ratione magni repellat? Duis aute irure te.</p>
+            <p class="mb-8">Lorem ipsum dolor sit amet consectetur adipiscing elit. Nisi, impedit rem, doloremque autem quibusdam blanditiis harum animi hic accusantium maxime atque ratione magni repellat? Duis aute irure te.</p>
             <a href="#" class="inline-block bg-blue-600 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">Learn More</a>
           </div>
         </div>
@@ -284,41 +284,45 @@
       </div>
 
 
-<!-- Contact Form -->
-<div class="max-w-6xl mx-auto px-4 py-12 bg-white rounded-lg shadow-lg mt-8">
-  <h2 class="text-3xl font-semibold text-gray-800 mb-4">Get In Touch</h2>
-  <form>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-              <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-              <input type="text" id="name" name="name" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full h-12 shadow-sm sm:text-sm border-gray-300 rounded-md">
+    <!-- Contact Form -->
+    <div class="max-w-6xl mx-auto px-4 py-12 bg-white rounded-lg shadow-lg mt-8">
+      <h1 class="text-3xl font-semibold text-gray-800 mb-4">Get In Touch</h1>
+      <form>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                  <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                  <input type="text" id="name" name="name" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full h-12 shadow-sm sm:text-sm border-gray-300 rounded-md">
+              </div>
+              <div>
+                  <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                  <input type="email" id="email" name="email" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full h-12 shadow-sm sm:text-sm border-gray-300 rounded-md">
+              </div>
+              <div>
+                  <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+                  <select id="subject" name="subject" class="mt-1 block w-full h-12 shadow-sm focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md">
+                    <option value="general">General Inquiry</option>
+                    <option value="support">Technical Support</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="other">Other</option>
+                  </select>
+              </div>
           </div>
-          <div>
-              <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-              <input type="email" id="email" name="email" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full h-12 shadow-sm sm:text-sm border-gray-300 rounded-md">
+          <div class="mt-4">
+              <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+              <textarea id="message" name="message" rows="6" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"></textarea>
           </div>
-          <div>
-              <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
-              <select id="subject" name="subject" class="mt-1 block w-full h-12 shadow-sm focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md">
-                <option value="general">General Inquiry</option>
-                <option value="support">Technical Support</option>
-                <option value="feedback">Feedback</option>
-                <option value="other">Other</option>
-              </select>
+          <div class="mt-4">
+              <button type="submit" class="inline-block bg-blue-600 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">Send Message</button>
           </div>
-      </div>
-      <div class="mt-4">
-          <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-          <textarea id="message" name="message" rows="6" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"></textarea>
-      </div>
-      <div class="mt-4">
-          <button type="submit" class="inline-block bg-blue-600 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">Send Message</button>
-      </div>
-  </form>
-</div>
-<!-- Contact Form Ends -->
+      </form>
+    </div>
 
-      
+    <!-- Contact Form Ends -->
+
+
+
+
+    
 
 
       
