@@ -135,14 +135,13 @@
           </div>
         </div>
     </div>
+    
 
 
 
-
-
-    <div style="background-image: url('/Frame%205.svg')" class="relative p-6 svg-background" x-data="{ activeSlide: 1, slides: [1, 2, 3] }">
+    <div class="min-h-screen bg-no-repeat bg-cover relative" style="background-image: url('/Frame 5.svg');">
         <!-- Slider -->
-        <div class="flex justify-between items-center">
+        <div class="flex justify-between items-center relative" style="z-index: 20;">
             <!-- Left Arrow -->
             <button class="text-white" @click="activeSlide = activeSlide > 1 ? activeSlide - 1 : slides.length">
                 &#9664;
@@ -150,12 +149,10 @@
     
             <!-- Slides Container -->
             <div class="w-full">
-                <template x-for="slide in slides" :key="slide">
+                <template x-for="(slide, index) in slides" :key="slide">
                     <div x-show="activeSlide === slide" class="flex justify-center items-center w-full h-64">
-                        <!-- Video Placeholder - use actual video tags or embeds here -->
-                        <div class="bg-gray-300 w-full h-full flex items-center justify-center text-2xl">
-                            Video {{ slide }}
-                        </div>
+                        <!-- Embedded Video -->
+                        <iframe width="560" height="315" :src="videos[index]" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </template>
             </div>
@@ -167,19 +164,55 @@
         </div>
     
         <!-- Dots Navigation -->
-        <div class="absolute bottom-0 left-0 right-0 flex justify-center space-x-2 pb-4">
+        <div class="absolute bottom-0 left-0 right-0 flex justify-center space-x-2 pb-4" style="z-index: 20;">
             <template x-for="(slide, index) in slides" :key="index">
                 <button class="w-3 h-3 bg-white rounded-full" :class="{ 'bg-blue-600': activeSlide === slide }" @click="activeSlide = slide" aria-label="Go to slide {{ slide }}"></button>
             </template>
         </div>
     
         <!-- Title -->
-        <h2 class="text-xl text-white absolute top-4 left-6">Testimonials</h2>
+        <h2 class="text-xl text-white absolute top-4 left-6" style="z-index: 20;">Testimonials</h2>
     </div>
     
-      
+    
+    
 
     <!-- Our Services Ends -->
+
+
+
+    
+
+
+    <div class="bg-gray-100 p-8">
+        <div class="text-center mb-8">
+          <h2 class="text-4xl font-bold text-gray-800">Meet The Team</h2>
+        </div>
+        <div class="grid grid-cols-3 gap-8">
+          <!-- Repeat this block for each team member -->
+          <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
+            <div class="rounded-full bg-gray-300 h-24 w-24 mb-3"></div>
+            <h3 class="text-lg font-bold">Angelo B</h3>
+            <p class="text-sm text-gray-600">Website Developer</p>
+            <div class="flex space-x-2 mt-4">
+              <a href="#" class="text-blue-500 hover:text-blue-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <!-- LinkedIn icon SVG path here -->
+                </svg>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <!-- GitHub icon SVG path here -->
+                </svg>
+              </a>
+            </div>
+          </div>
+          <!-- ... other team members -->
+        </div>
+      </div>
+      
+
+
 
     
 </body>
