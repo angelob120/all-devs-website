@@ -8,59 +8,77 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<!-- Navbar Starts-->
-<div class="min-h-screen bg-no-repeat bg-cover" style="background-image: url('/Frame 4.svg');">
-    <nav class="bg-blue-800 bg-opacity-50 text-white p-4">
-      <div class="max-w-6xl mx-auto flex justify-between items-center">
-        <a href="#" class="text-xl font-bold">Logo</a>
-        <div class="space-x-4">
-          <a href="Index.html" class="hover:bg-blue-700 px-3 py-2 rounded">Home</a>
-          <a href="Services.html" class="hover:bg-blue-700 px-3 py-2 rounded">Services</a>
-          <a href="About.html" class="hover:bg-blue-700 px-3 py-2 rounded">About</a>
-          <a href="projects.html" class="hover:bg-blue-700 px-3 py-2 rounded">Projects</a>
-          <a href="contact.html" class="bg-white text-blue-600 hover:bg-gray-100 px-3 py-2 rounded">Contacts</a>
+
+<body>
+    <!-- Navbar Starts-->
+    <div class="pt-20 min-h-screen bg-no-repeat bg-cover" style="background-image: url('/Frame 4.svg');">
+        <!-- Main Header Starts -->
+        <div class="max-w-6xl mx-auto px-4 py-12 flex flex-wrap items-center">
+            <div class="w-full text-center text-white">
+                <h1 class="text-6xl font-bold">Welcome to Our Forum</h1>
+                <p class="text-xl mt-4">Connect, Share, and Learn</p>
+            </div>
         </div>
-      </div>
-    </nav>
     <!-- Navbar ends -->
   
     <!-- Main Header Starts -->
-    <div class="max-w-6xl mx-auto px-4 py-12 flex flex-wrap items-center">
-        <div class="w-full lx:w-1 text-white">
-          <h1 class="text-8xl font-bold text-center">Contact</h1>
+        <div class="max-w-6xl mx-auto px-4 py-12 flex flex-wrap items-center">
+            <div class="w-full lx:w-1 text-white">
+                <h1 class="text-8xl font-bold text-center">Forum</h1>
+                
         </div>
+        
     </div>
+            <!-- Contact Form -->
+    <div class="max-w-5xl mx-auto px-6 py-8 bg-white rounded-lg shadow-xl mt-10">
+        <h2 class="text-4xl font-semibold text-gray-800 mb-6 text-center">Get In Touch</h2>
+        <br>
+        <br>
+        <form>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                    <input type="text" id="name" name="name" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full h-12 shadow-sm sm:text-sm border-gray-300 rounded-md">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" name="email" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full h-12 shadow-sm sm:text-sm border-gray-300 rounded-md">
+                </div>
+            </div>
+            <div class="mt-4">
+                <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+                <select id="subject" name="subject" class="mt-1 block w-full h-12 shadow-sm focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md">
+                <option value="general">General Inquiry</option>
+                <option value="support">Technical Support</option>
+                <option value="feedback">Feedback</option>
+                <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="mt-4">
+                <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                <textarea id="message" name="message" rows="6" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"></textarea>
+            </div>
+            <div class="mt-6 text-left">
+                <button type="submit" class="inline-block bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+                    Send Message
+                </button>
+            </div>
+        </form>
+    </div>
+    <!-- Contact Form Ends -->
 </div>
 <!-- Main Header Ends -->
 
+<br>
+<br>
+<br>
+<br>
 
-<body>
 
 
 
     
 </body>
-
-
-<!-- Footer starts -->
-<footer>
-    <li>
-        <a href="Index.html">Home</a>
-    </li>
-    <li>
-        <a href="About.html">About Us</a>
-    </li>
-    <li>
-        <a href="contact.html">Contact</a>
-    </li>
-    <li>
-        <a href="projects.html">Projects</a>
-    </li>
-    <li>
-        <a href="Services.html">Services</a>
-    </li>
-</footer>
-<!-- footer end -->
 
 
 </html>
