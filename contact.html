@@ -8,7 +8,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-
 <body>
     <!-- Navbar Starts-->
     <div class="min-h-screen bg-no-repeat bg-cover" style="background-image: url('/Frame 4.svg');">
@@ -24,65 +23,55 @@
             </div>
           </div>
         </nav>
-  
+
     <!-- Main Header Starts -->
         <div class="max-w-6xl mx-auto px-4 py-12 flex flex-wrap items-center">
             <div class="w-full lx:w-1 text-white">
                 <h1 class="text-8xl font-bold text-center">Contact</h1>
-                
+            </div>
         </div>
-        
-    </div>
-            <!-- Contact Form -->
-    <div class="max-w-5xl mx-auto px-6 py-8 bg-white rounded-lg shadow-xl mt-10">
-        <h2 class="text-4xl font-semibold text-gray-800 mb-6 text-center">Get In Touch</h2>
-        <br>
-        <br>
-        <form>
+        <!-- Contact Form -->
+        <div class="max-w-5xl mx-auto px-6 py-8 bg-white rounded-lg shadow-xl mt-10">
+            <h2 class="text-4xl font-semibold text-gray-800 mb-6 text-center">Get In Touch</h2>
+            <br>
+            <br>
+            <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-                    <input type="text" id="name" name="name" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full h-12 shadow-sm sm:text-sm border-gray-300 rounded-md">
-                </div>
-                <div>
-                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                    <input type="email" id="email" name="email" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full h-12 shadow-sm sm:text-sm border-gray-300 rounded-md">
-                </div>
+               <div>
+                  <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                  <input type="text" id="name" name="name" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full h-12 shadow-sm sm:text-sm border-gray-300 rounded-md">
+               </div>
+               <div>
+                  <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                  <input type="email" id="email" name="email" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full h-12 shadow-sm sm:text-sm border-gray-300 rounded-md">
+               </div>
             </div>
             <div class="mt-4">
-                <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
-                <select id="subject" name="subject" class="mt-1 block w-full h-12 shadow-sm focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md">
-                <option value="general">General Inquiry</option>
-                <option value="support">Technical Support</option>
-                <option value="feedback">Feedback</option>
-                <option value="other">Other</option>
-                </select>
+               <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+               <select id="subject" name="subject" class="mt-1 block w-full h-12 shadow-sm focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md">
+                  <option value="General Inquiry">General Inquiry</option>
+                  <option value="Technical Support">Technical Support</option>
+                  <option value="Feedback">Feedback</option>
+                  <option value="Other">Other</option>
+               </select>
             </div>
             <div class="mt-4">
-                <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-                <textarea id="message" name="message" rows="6" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"></textarea>
+               <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+               <textarea id="message" name="message" rows="6" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"></textarea>
             </div>
             <div class="mt-6 text-left">
-                <button type="submit" class="inline-block bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
-                    Send Message
-                </button>
+               <button type="button" onclick="sendEmail()" class="inline-block bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+                  Send Message
+               </button>
             </div>
-        </form>
-    </div>
-    <!-- Contact Form Ends -->
-</div>
-<!-- Main Header Ends -->
+        </div>
+        <!-- Main Header Ends -->
 
-<br>
-<br>
-<br>
-<br>
-
-
-
-
-    
-</body>
+        <br>
+        <br>
+        <br>
+        <br>
+    </body>
 
 <!-- Footer starts -->
 <footer class="bg-blue-200 text-white" style="background-image: url('/Frame 2.svg');">
@@ -129,6 +118,32 @@
   </footer>
   
   <!-- footer end -->
+
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+      (function(){
+         emailjs.init("user_ki7V3klQWzRzeIMte");
+      })();
+  </script>
+  <script type="text/javascript">
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+          var templateParams = {
+             to_name: document.getElementById("name").value,
+             from_name: document.getElementById("email").value,
+             subject: document.getElementById("subject").value,
+             message: document.getElementById("message").value
+          };
+  
+          emailjs.send('service_dburs96', 'template_qlotxua', templateParams)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                window.location.reload(); // Reloads the page upon successful submission
+            }, function(error) {
+                console.log('FAILED...', error);
+            });
+      });
+  </script>
 
 
 </html>
